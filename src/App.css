@@ -12,8 +12,8 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* 6 ستون */
   grid-template-rows: repeat(8, 1fr); /* 8 ردیف */
-  width: 100vw; /* تمام عرض صفحه */
-  height: 100vh; /* تمام ارتفاع صفحه */
+  width: 100vw;
+  height: 100vh;
 }
 
 .touched {
