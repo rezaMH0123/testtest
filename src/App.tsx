@@ -20,7 +20,7 @@ const CameraComponent: React.FC = () => {
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor: "red" }}>
       <Webcam
         audio={false}
         ref={webcamRef}
