@@ -53,8 +53,17 @@ export default function VideoComponent() {
         audio={true}
         ref={webcamRef}
         screenshotFormat="image/jpeg"
+        muted={true} // صدای ویدیو بی‌صدا می‌شود
         videoConstraints={{
           facingMode: facingMode,
+        }}
+        audioConstraints={{
+          echoCancellation: true, // فعال کردن حذف اکو
+          noiseSuppression: true, // حذف نویز
+          autoGainControl: true, // کنترل خودکار صدا
+        }}
+        style={{
+          transform: facingMode === "user" ? "scaleX(-1)" : "scaleX(1)", // غیرفعال کردن حالت آینه‌ای
         }}
       />
 
