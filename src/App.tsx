@@ -1,48 +1,14 @@
-import React, { useState, useRef, useCallback } from "react";
-import Webcam from "react-webcam";
+import React from "react";
+import VideoComponent from "./VideoComponent";
+import PictureComponent from "./PictureComponent";
 
-const CameraComponent: React.FC = () => {
-  const [facingMode, setFacingMode] = useState<"user" | "environment">("user");
-  const [capturedImage, setCapturedImage] = useState<string | null>(null);
-  const webcamRef = useRef<Webcam>(null);
-
-  const capture = useCallback(() => {
-    const imageSrc = webcamRef.current?.getScreenshot();
-    if (imageSrc) {
-      setCapturedImage(imageSrc);
-    }
-  }, [webcamRef, setCapturedImage]);
-
-  const switchCamera = () => {
-    setFacingMode((prevState) =>
-      prevState === "user" ? "environment" : "user"
-    );
-  };
-
+const App: React.FC = () => {
   return (
-    <div style={{ backgroundColor: "red" }}>
-      <Webcam
-        audio={false}
-        ref={webcamRef}
-        screenshotFormat="image/jpeg"
-        videoConstraints={{
-          facingMode: facingMode,
-        }}
-      />
-
-      <button onClick={capture}>Take Photo</button>
-      <button onClick={switchCamera}>
-        Switch to {facingMode === "user" ? "Back" : "Front"} Camera
-      </button>
-
-      {capturedImage && (
-        <div>
-          <h2>Captured Image:</h2>
-          <img src={capturedImage} alt="Captured" />
-        </div>
-      )}
-    </div>
+    <>
+      {/* <PictureComponent /> */}
+      <VideoComponent />
+    </>
   );
 };
 
-export default CameraComponent;
+export default App;
