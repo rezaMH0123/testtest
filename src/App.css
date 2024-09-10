@@ -34,14 +34,13 @@
   background-color: darkblue;
 }
 
-/* کانتینر گرید */
 .tContainer {
   display: grid;
-  width: 100vw; /* عرض کامل صفحه */
-  height: 100vh; /* ارتفاع کامل صفحه */
-  grid-template-columns: repeat(10, 1fr); /* 10 ستون برابر */
-  grid-template-rows: repeat(20, 1fr); /* 20 ردیف برابر */
-  gap: 0; /* بدون فاصله بین دیوها */
+  width: 100lvw; /* عرض کامل با در نظر گرفتن واحد تطبیق‌یافته */
+  height: 100lvh; /* ارتفاع کامل تطبیق‌یافته */
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  gap: 0;
   box-sizing: border-box;
   border: 1px solid red;
 }
