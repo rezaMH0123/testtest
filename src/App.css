@@ -1,3 +1,4 @@
+/* تنظیمات پایه برای جلوگیری از زوم و اسکرول */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,11 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden; /* جلوگیری از اسکرول */
-  overscroll-behavior: none;
+  overscroll-behavior: none; /* جلوگیری از اسکرول ناخواسته در مرورگرهای موبایل */
+  touch-action: none; /* جلوگیری از زوم با حرکات چند لمسی */
+  -webkit-user-select: none; /* جلوگیری از انتخاب متن در مرورگرهای موبایل */
+  user-select: none;
+  -webkit-touch-callout: none; /* جلوگیری از لمس طولانی و نمایش منوی مرورگر */
 }
 
 .container {
@@ -18,8 +23,10 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100vw;
   margin: 0;
   padding: 0;
+  overflow: hidden; /* جلوگیری از اسکرول داخلی */
 }
 
 .grid-container {
