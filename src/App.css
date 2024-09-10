@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .container {
   display: flex;
   flex-direction: column;
@@ -10,8 +14,8 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 ستون */
-  grid-template-rows: repeat(8, 1fr); /* 8 ردیف */
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   width: 100vw;
   height: 100vh;
 }
@@ -33,36 +37,25 @@
 .confirm-button:hover {
   background-color: darkblue;
 }
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  height: 100vh; /* old browsers */
-  height: 100dvh; /* new browsers */
-
-  width: 100%;
-}
 
 .tContainer {
   display: grid;
-  width: 100vw; /* عرض کامل */
-  height: 100vh; /* کم کردن 1 پیکسل برای اطمینان از عدم اسکرول */
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(20, 1fr);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   gap: 0;
   box-sizing: border-box;
-  border: 1px solid red;
 }
 
-/* آیتم‌های گرید */
-.tItem {
+.titems {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
   font-size: 12px;
   box-sizing: border-box;
+}
+.colored {
+  background-color: green;
 }

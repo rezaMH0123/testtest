@@ -1,12 +1,10 @@
-import React from "react";
-// import Touch from "./Touch";
-import Test from "./Test";
-// import VoiceRecorder from "./VoiceRecorder";
+import React, { useEffect } from "react";
+import TouchTest from "./TouchTest";
 
 const App: React.FC = () => {
   return (
-    <div>
-      <Test />
+    <div style={{ width: "100vw", height: "100vh" }}>
+      <TouchTest />
       {/* <Touch /> */}
       {/* <PictureComponent /> */}
       {/* <VideoComponent /> */}
