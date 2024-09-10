@@ -7,12 +7,10 @@ interface GridItem {
 }
 
 export default function Touch() {
-  // آرایه‌ای برای نگه‌داری وضعیت لمس هر بخش از گرید
   const [grid, setGrid] = useState<GridItem[]>(
-    Array.from({ length: 200 }, (_, i) => ({ id: i, touched: false }))
+    Array.from({ length: 100 }, (_, i) => ({ id: i, touched: false })) // گرید 10x10
   );
 
-  // تغییر وضعیت لمس هر بخش
   const handleTouch = (id: number) => {
     setGrid((prevGrid) =>
       prevGrid.map((item) =>
@@ -21,9 +19,8 @@ export default function Touch() {
     );
   };
 
-  // هندلر برای رویداد onTouchMove
   const handleTouchMove = (event: React.TouchEvent) => {
-    const touch = event.touches[0]; // اولین لمس را بگیرید
+    const touch = event.touches[0];
     const targetElement = document.elementFromPoint(
       touch.clientX,
       touch.clientY
@@ -34,7 +31,6 @@ export default function Touch() {
     }
   };
 
-  // هندلر برای رویداد onMouseMove (برای دسکتاپ)
   const handleMouseMove = (event: React.MouseEvent) => {
     const targetElement = event.target as HTMLElement;
     if (targetElement && targetElement.dataset.id) {
@@ -43,7 +39,6 @@ export default function Touch() {
     }
   };
 
-  // چک کردن اینکه آیا همه بخش‌ها لمس شده‌اند یا نه
   const handleConfirm = () => {
     const unTouched = grid.filter((item) => !item.touched);
     if (unTouched.length > 0) {
@@ -57,21 +52,20 @@ export default function Touch() {
     <div className="container">
       <div
         className="grid-container"
-        onTouchMove={handleTouchMove} // رویداد حرکت لمسی
-        onMouseMove={handleMouseMove} // رویداد حرکت ماوس
+        onTouchMove={handleTouchMove}
+        onMouseMove={handleMouseMove}
       >
         {grid.map((item) => (
           <div
             key={item.id}
-            data-id={item.id} // داده‌ای برای شناسایی هر آیتم
+            data-id={item.id}
             className={`grid-item ${item.touched ? "touched" : "untouched"}`}
-            onTouchStart={() => handleTouch(item.id)} // رویداد لمسی برای موبایل
-            onClick={() => handleTouch(item.id)} // رویداد کلیک برای دسکتاپ
+            onTouchStart={() => handleTouch(item.id)}
+            onClick={() => handleTouch(item.id)}
           />
         ))}
       </div>
 
-      {/* دکمه تایید */}
       <button className="confirm-button" onClick={handleConfirm}>
         تایید
       </button>
