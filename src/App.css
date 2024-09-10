@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* جلوگیری از اسکرول */
+  overscroll-behavior: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -10,10 +24,15 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 ستون */
-  grid-template-rows: repeat(8, 1fr); /* 8 ردیف */
+  grid-template-columns: repeat(10, 1fr); /* 10 ستون */
+  grid-template-rows: repeat(20, 1fr); /* 20 ردیف */
   width: 100vw;
   height: 100vh;
+}
+
+.grid-item {
+  width: 100%; /* اندازه سلول را کوچک‌تر می‌کنیم */
+  height: 100%;
 }
 
 .touched {
