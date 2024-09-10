@@ -37,7 +37,7 @@
 .tContainer {
   display: grid;
   width: 100vw; /* عرض کامل */
-  height: calc(100vh - 1px); /* کم کردن 1 پیکسل برای اطمینان از عدم اسکرول */
+  height: calc(100vh - 50px); /* کم کردن 1 پیکسل برای اطمینان از عدم اسکرول */
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(20, 1fr);
   gap: 0;
