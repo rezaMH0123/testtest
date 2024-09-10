@@ -8,11 +8,11 @@ html,
 body {
   width: 100vw;
   height: 100vh;
-  overflow: hidden; /* جلوگیری از اسکرول */
-  overscroll-behavior: none; /* جلوگیری از اسکرول ناخواسته در مرورگرهای موبایل */
-  -webkit-user-select: none; /* جلوگیری از انتخاب متن در مرورگرهای موبایل */
+  overflow: hidden;
+  overscroll-behavior: none;
+  -webkit-user-select: none;
   user-select: none;
-  -webkit-touch-callout: none; /* جلوگیری از لمس طولانی و نمایش منوی مرورگر */
+  -webkit-touch-callout: none;
 }
 
 .container {

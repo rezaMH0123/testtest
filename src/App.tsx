@@ -1,16 +1,18 @@
 import React from "react";
-import Touch from "./Touch";
+// import Touch from "./Touch";
+import Test from "./Test";
 // import VoiceRecorder from "./VoiceRecorder";
 
 const App: React.FC = () => {
   return (
-    <>
-      <Touch />
+    <div>
+      {/* <Touch /> */}
+      <Test />
 
       {/* <PictureComponent /> */}
       {/* <VideoComponent /> */}
       {/* <VoiceRecorder /> */}
-    </>
+    </div>
   );
 };
 

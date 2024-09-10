@@ -9,7 +9,7 @@ interface GridItem {
 export default function Touch() {
   // آرایه‌ای برای نگه‌داری وضعیت لمس هر بخش از گرید
   const [grid, setGrid] = useState<GridItem[]>(
-    Array.from({ length: 200 }, (_, i) => ({ id: i, touched: false })) // تعداد بیشتری آیتم گرید (مثلاً 400)
+    Array.from({ length: 200 }, (_, i) => ({ id: i, touched: false }))
   );
 
   // تغییر وضعیت لمس هر بخش
