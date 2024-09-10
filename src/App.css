@@ -36,8 +36,8 @@
 
 .tContainer {
   display: grid;
-  width: 100lvw; /* عرض کامل با در نظر گرفتن واحد تطبیق‌یافته */
-  height: 100lvh; /* ارتفاع کامل تطبیق‌یافته */
+  width: 100vw; /* عرض کامل */
+  height: calc(100vh - 1px); /* کم کردن 1 پیکسل برای اطمینان از عدم اسکرول */
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(20, 1fr);
   gap: 0;
