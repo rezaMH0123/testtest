@@ -4,6 +4,7 @@ import "./App.css";
 export default function TouchTest() {
   const [columns, setColumns] = useState<number>(1);
   const [rows, setRows] = useState<number>(1);
+  const [fierstTime, setFierstTime] = useState<number>(1);
   const [coloredItems, setColoredItems] = useState<number[]>([]);
 
   useEffect(() => {
@@ -60,9 +61,14 @@ export default function TouchTest() {
   const handleCheck = () => {
     const totalItems = columns * rows;
     if (coloredItems.length === totalItems) {
-      alert("تمام آیتم‌ها رنگ شده‌اند!");
+      alert("تمام بخش رنگ شده‌اند!");
     } else {
-      alert("هنوز برخی آیتم‌ها رنگ نشده‌اند.");
+      if (fierstTime < 1) {
+        alert("هنوز برخی بخش ها رنگ نشده‌اند.");
+        setFierstTime(fierstTime + 1);
+      } else {
+        alert("تاچ صفحه شما مشکل دارد.");
+      }
     }
   };
 
