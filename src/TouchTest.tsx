@@ -4,7 +4,7 @@ import "./App.css";
 export default function TouchTest() {
   const [columns, setColumns] = useState<number>(1);
   const [rows, setRows] = useState<number>(1);
-  const [fierstTime, setFierstTime] = useState<number>(1);
+  const [attemptCount, setAttemptCount] = useState<number>(0);
   const [coloredItems, setColoredItems] = useState<number[]>([]);
 
   useEffect(() => {
@@ -65,7 +65,12 @@ export default function TouchTest() {
     if (coloredItems.length === totalItems) {
       alert("تمام بخش رنگ شده‌اند!");
     } else {
-      alert("هنوز برخی بخش ها رنگ نشده‌اند.");
+      if (attemptCount === 0) {
+        alert("همه رنگ نشدند");
+      } else {
+        alert("تاچ اسکرین شما خراب است");
+      }
+      setAttemptCount(attemptCount + 1);
     }
   };
 
@@ -89,9 +94,7 @@ export default function TouchTest() {
             }`}
             onTouchStart={() => handleTouch(index)}
             onClick={() => handleTouch(index)}
-          >
-            {index + 1}
-          </div>
+          ></div>
         ))}
       </div>
       <button
