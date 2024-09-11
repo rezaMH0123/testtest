@@ -66,13 +66,6 @@ export default function TouchTest() {
       alert("تمام بخش رنگ شده‌اند!");
     } else {
       alert("هنوز برخی بخش ها رنگ نشده‌اند.");
-
-      // if (fierstTime < 2) {
-      //   alert("هنوز برخی بخش ها رنگ نشده‌اند.");
-      //   setFierstTime(fierstTime + 1);
-      // } else {
-      //   alert("تاچ صفحه شما مشکل دارد.");
-      // }
     }
   };
 
