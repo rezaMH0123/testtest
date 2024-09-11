@@ -9,6 +9,7 @@ export default function TouchTest() {
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
+    document.documentElement.style.touchAction = "none";
 
     const calculateGrid = () => {
       const containerWidth = window.innerWidth;
@@ -28,6 +29,7 @@ export default function TouchTest() {
 
     return () => {
       document.body.style.overflow = "auto";
+      document.documentElement.style.touchAction = "auto";
       window.removeEventListener("resize", calculateGrid);
     };
   }, []);
