@@ -65,12 +65,14 @@ export default function TouchTest() {
     if (coloredItems.length === totalItems) {
       alert("تمام بخش رنگ شده‌اند!");
     } else {
-      if (fierstTime < 2) {
-        alert("هنوز برخی بخش ها رنگ نشده‌اند.");
-        setFierstTime(fierstTime + 1);
-      } else {
-        alert("تاچ صفحه شما مشکل دارد.");
-      }
+      alert("هنوز برخی بخش ها رنگ نشده‌اند.");
+
+      // if (fierstTime < 2) {
+      //   alert("هنوز برخی بخش ها رنگ نشده‌اند.");
+      //   setFierstTime(fierstTime + 1);
+      // } else {
+      //   alert("تاچ صفحه شما مشکل دارد.");
+      // }
     }
   };
 
@@ -94,7 +96,9 @@ export default function TouchTest() {
             }`}
             onTouchStart={() => handleTouch(index)}
             onClick={() => handleTouch(index)}
-          ></div>
+          >
+            {index + 1}
+          </div>
         ))}
       </div>
       <button

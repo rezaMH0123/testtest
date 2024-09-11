@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* html,
+html,
 body {
   touch-action: none;
-} */
+}
 
 .touched {
   background-color: green;
