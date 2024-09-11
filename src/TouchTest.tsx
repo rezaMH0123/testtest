@@ -63,7 +63,7 @@ export default function TouchTest() {
     if (coloredItems.length === totalItems) {
       alert("تمام بخش رنگ شده‌اند!");
     } else {
-      if (fierstTime < 1) {
+      if (fierstTime < 2) {
         alert("هنوز برخی بخش ها رنگ نشده‌اند.");
         setFierstTime(fierstTime + 1);
       } else {
